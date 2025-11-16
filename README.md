@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-Esta API permite gerenciar membros, projetos, trabalhos de pesquisa e administradores de uma instituição acadêmica, incluindo suas associações e relacionamentos.
+Esta API permite gerenciar membros, projetos, trabalhos de pesquisa e administradores de uma instituição acadêmica, incluindo suas associações e relacionamentos que irão ser servidas pro frontend da aplicação.
 
 ## Entidades
 
