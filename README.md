@@ -16,7 +16,7 @@ Esta API permite gerenciar membros, projetos, trabalhos de pesquisa e administra
 - **foto**: URL da foto de perfil
 - **linkedin**: Perfil do LinkedIn
 - **descricao**: Descrição/biografia
-- **equipe**: Equipe ou departamento
+- **equipe**: Equipe(s) [Sinapse, ...]
 
 #### Projeto
 - **id**: Identificador único
