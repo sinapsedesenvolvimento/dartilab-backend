@@ -6,7 +6,7 @@ Esta API permite gerenciar membros, projetos, trabalhos de pesquisa e administra
 
 ## Entidades
 
-### 📋 Campos por Entidade
+### Campos por Entidade
 
 #### Membro
 - **id**: Identificador único
@@ -53,7 +53,7 @@ Esta API permite gerenciar membros, projetos, trabalhos de pesquisa e administra
 
 ---
 
-## 🚀 Endpoints da API
+## Endpoints da API
 
 ### Membros
 
@@ -387,7 +387,7 @@ DELETE /membros-pesquisas/:id_membro/:id_pesquisa
 
 ---
 
-## 🔍 Consultas Especiais
+## Consultas Especiais
 
 ### Relacionamentos
 ```http
@@ -412,7 +412,7 @@ GET /trabalhos/:id/membros
 
 ---
 
-## 📝 Notas
+##  Notas
 
 - Todos os IDs são números inteiros únicos
 - Campos marcados como "opcional" podem ser omitidos nas requisições
