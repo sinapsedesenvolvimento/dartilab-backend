@@ -72,7 +72,7 @@ POST /membros
   "foto": "string",
   "linkedin": "string",
   "descricao": "string",
-  "equipe": "string"
+  "id_equipes": "string[]"
 }
 ```
 
@@ -103,7 +103,6 @@ PUT /membros/:id
   "foto": "string",
   "linkedin": "string",
   "descricao": "string",
-  "id_equipe": "string"
 }
 ```
 
@@ -111,7 +110,7 @@ PUT /membros/:id
 ```http
 DELETE /membros/:id
 ```
-**Descrição:** Deletar membro
+**Descrição:** Deletar membro 
 
 ---
 
@@ -128,7 +127,6 @@ POST /equipe
 {
   "nome": "string",
   "descricao": "string", // exemplo: Equipe de Análise e Dados
-  "ano_criacao": "date"
   "instagram": "string",
   "linkedin": "string"
 }
@@ -139,6 +137,28 @@ POST /equipe
 POST /membros/:id_equipe/:id_membro
 ```
 **Descrição:** vincular usuário à uma equipe
+
+#### Atualizar Equipe
+```http
+PUT /equipe
+```
+**Descrição:** Editar informações de equipe
+
+**Body:**
+```json
+{
+  "nome": "string",
+  "descricao": "string", // exemplo: Equipe de Análise e Dados
+  "instagram": "string",
+  "linkedin": "string"
+}
+```
+
+#### Desvincula Membro de uma equipe
+```http
+DELETE /membros/:id_equipe/:id_membro
+```
+**Descrição:** desvincular usuário à uma equipe
 
 ### Projetos
 
