@@ -1,12 +1,10 @@
 # DartLab Site Backend
 
-## Visão Geral
+## 1. Visão Geral
 
 Esta API permite gerenciar membros, projetos, trabalhos de pesquisa e administradores de uma instituição acadêmica, incluindo suas associações e relacionamentos que irão ser servidas pro frontend da aplicação.
 
-## Entidades
-
-### Campos por Entidade
+## 2. Entidades
 
 #### Membro
 - **id**: Identificador único
@@ -40,24 +38,15 @@ Esta API permite gerenciar membros, projetos, trabalhos de pesquisa e administra
 - **nome**: Nome completo
 - **email**: E-mail de acesso
 - **senha**: Senha de acesso
-- **categoria**: Nível de acesso/categoria
-
-#### Relacionamentos N:N
-- **Membro_projeto**: Associação entre membros e projetos
-  - id_membro, id_projeto
-  - Campos opcionais: papel, data_entrada
-  
-- **Membro_pesquisa**: Associação entre membros e pesquisas
-  - id_membro, id_pesquisa
-  - Campos opcionais: papel, data_entrada
+- **categoria**: Nível de acesso/categoria // quero conversar sobre
 
 ---
 
-## Endpoints da API
+## 3 Endpoints da API
 
-### Membros
+### 3.1 Membros
 
-#### Criar Membro
+#### 3.1.1 Criar Membro
 ```http
 POST /membros
 ```
@@ -76,19 +65,19 @@ POST /membros
 }
 ```
 
-#### Listar Membros
+#### 3.1.2 Listar Membros
 ```http
 GET /membros
 ```
 **Descrição:** Listar todos os membros
 
-#### Buscar Membro
+#### 3.1.3 Buscar Membro
 ```http
 GET /membros/:id
 ```
 **Descrição:** Buscar membro por ID
 
-#### Atualizar Membro
+#### 3.1.4 Atualizar Membro
 ```http
 PUT /membros/:id
 ```
@@ -106,7 +95,7 @@ PUT /membros/:id
 }
 ```
 
-#### Deletar Membro
+#### 3.1.5 Deletar Membro
 ```http
 DELETE /membros/:id
 ```
@@ -114,9 +103,9 @@ DELETE /membros/:id
 
 ---
 
-### Equipe
+### 3.2 Equipe
 
-#### Criar Equipe
+#### 3.2.1 Criar Equipe
 ```http
 POST /equipe
 ```
@@ -132,13 +121,13 @@ POST /equipe
 }
 ```
 
-#### Vincular Membro À uma equipe
+#### 3.2.2 Vincular Membro À uma equipe
 ```http
 POST /equipe/:id_equipe/:id_membro
 ```
 **Descrição:** vincular usuário à uma equipe
 
-#### Atualizar Equipe
+#### 3.2.3 Atualizar Equipe
 ```http
 PUT /equipe
 ```
@@ -154,21 +143,21 @@ PUT /equipe
 }
 ```
 
-#### Desvincula Membro de uma equipe
+#### 3.2.4 Desvincula Membro de uma equipe
 ```http
 DELETE /equipe/:id_equipe/:id_membro
 ```
 **Descrição:** desvincular usuário à uma equipe
 
-#### Buscar membros de uma equipe
+#### 3.2.5 Buscar membros de uma equipe
 ```http
 DELETE /equipe/:id/membros
 ```
 **Descrição:** Buscar todos membros de uma equipe
 
-### Projetos
+### 3.3 Projetos
 
-#### Criar Projeto
+#### 3.3.1 Criar Projeto
 ```http
 POST /projetos
 ```
@@ -185,19 +174,19 @@ POST /projetos
 }
 ```
 
-#### Listar Projetos
+#### 3.3.2 Listar Projetos
 ```http
 GET /projetos
 ```
 **Descrição:** Listar todos os projetos
 
-#### Buscar Projeto
+#### 3.3.3 Buscar Projeto
 ```http
 GET /projetos/:id
 ```
 **Descrição:** Buscar projeto por ID
 
-#### Atualizar Projeto
+#### 3.3.4 Atualizar Projeto
 ```http
 PUT /projetos/:id
 ```
@@ -214,7 +203,7 @@ PUT /projetos/:id
 }
 ```
 
-#### Deletar Projeto
+#### 3.3.5 Deletar Projeto
 ```http
 DELETE /projetos/:id
 ```
@@ -222,9 +211,9 @@ DELETE /projetos/:id
 
 ---
 
-### Trabalhos (Pesquisas)
+### 3.4 Trabalhos (Pesquisas)
 
-#### Criar Trabalho
+#### 3.4.1 Criar Trabalho
 ```http
 POST /trabalhos
 ```
@@ -242,19 +231,19 @@ POST /trabalhos
 }
 ```
 
-#### Listar Trabalhos
+#### 3.4.2 Listar Trabalhos
 ```http
 GET /trabalhos
 ```
 **Descrição:** Listar todos os trabalhos
 
-#### Buscar Trabalho
+#### 3.4.3 Buscar Trabalho
 ```http
 GET /trabalhos/:id
 ```
 **Descrição:** Buscar trabalho por ID
 
-#### Atualizar Trabalho
+#### 3.4.4 Atualizar Trabalho
 ```http
 PUT /trabalhos/:id
 ```
@@ -272,7 +261,7 @@ PUT /trabalhos/:id
 }
 ```
 
-#### Deletar Trabalho
+#### 3.4.5 Deletar Trabalho
 ```http
 DELETE /trabalhos/:id
 ```
@@ -280,9 +269,9 @@ DELETE /trabalhos/:id
 
 ---
 
-### Administradores
+### 3.5 Administradores
 
-#### Criar Admin
+#### 3.5.1 Criar Admin
 ```http
 POST /admins
 ```
@@ -298,19 +287,19 @@ POST /admins
 }
 ```
 
-#### Listar Admins
+#### 3.5.2 Listar Admins
 ```http
 GET /admins
 ```
 **Descrição:** Listar todos os admins
 
-#### Buscar Admin
+#### 3.5.3 Buscar Admin
 ```http
 GET /admins/:id
 ```
 **Descrição:** Buscar admin por ID
 
-#### Atualizar Admin
+#### 3.5.4 Atualizar Admin
 ```http
 PUT /admins/:id
 ```
@@ -326,7 +315,7 @@ PUT /admins/:id
 }
 ```
 
-#### Deletar Admin
+#### 3.5.5 Deletar Admin
 ```http
 DELETE /admins/:id
 ```
