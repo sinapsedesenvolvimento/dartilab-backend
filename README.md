@@ -16,6 +16,13 @@ Esta API permite gerenciar membros, projetos, trabalhos de pesquisa e administra
 - **descricao**: Descrição/biografia
 - **equipe**: Equipe(s) [Sinapse, ...]
 
+#### Equipe
+- **id**: Identificador único
+- **nome**: Nome equipe
+- **descricao**: Descrição da equipe (ex: equipe de robótica, desenvolvimento de jogos, ...)
+- ...
+  
+
 #### Projeto
 - **id**: Identificador único
 - **titulo**: Título do projeto
