@@ -120,7 +120,7 @@ DELETE /membros/:id
 ```http
 POST /equipe
 ```
-**Descrição:** vincular usuário à uma equipe
+**Descrição:** Criar equipe
 
 **Body:**
 ```json
@@ -132,9 +132,9 @@ POST /equipe
 }
 ```
 
-#### Vincular Membro a uma equipe
+#### Vincular Membro À uma equipe
 ```http
-POST /membros/:id_equipe/:id_membro
+POST /equipe/:id_equipe/:id_membro
 ```
 **Descrição:** vincular usuário à uma equipe
 
@@ -156,9 +156,15 @@ PUT /equipe
 
 #### Desvincula Membro de uma equipe
 ```http
-DELETE /membros/:id_equipe/:id_membro
+DELETE /equipe/:id_equipe/:id_membro
 ```
 **Descrição:** desvincular usuário à uma equipe
+
+#### Buscar membros de uma equipe
+```http
+DELETE /equipe/:id/membros
+```
+**Descrição:** Buscar todos membros de uma equipe
 
 ### Projetos
 
