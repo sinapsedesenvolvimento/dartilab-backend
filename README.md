@@ -103,7 +103,7 @@ PUT /membros/:id
   "foto": "string",
   "linkedin": "string",
   "descricao": "string",
-  "equipe": "string"
+  "id_equipe": "string"
 }
 ```
 
@@ -114,6 +114,31 @@ DELETE /membros/:id
 **Descrição:** Deletar membro
 
 ---
+
+### Equipe
+
+#### Criar Equipe
+```http
+POST /equipe
+```
+**Descrição:** vincular usuário à uma equipe
+
+**Body:**
+```json
+{
+  "nome": "string",
+  "descricao": "string", // exemplo: Equipe de Análise e Dados
+  "ano_criacao": "date"
+  "instagram": "string",
+  "linkedin": "string"
+}
+```
+
+#### Vincular Membro a uma equipe
+```http
+POST /membros/:id_equipe/:id_membro
+```
+**Descrição:** vincular usuário à uma equipe
 
 ### Projetos
 
