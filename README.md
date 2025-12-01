@@ -341,18 +341,6 @@ POST /membros-projetos
 }
 ```
 
-#### Listar Associações
-```http
-GET /membros-projetos
-```
-**Descrição:** Listar todas as associações membro-projeto
-
-#### Buscar Associação
-```http
-GET /membros-projetos/:id_membro/:id_projeto
-```
-**Descrição:** Buscar associação específica
-
 #### Atualizar Associação
 ```http
 PUT /membros-projetos/:id_membro/:id_projeto
@@ -392,18 +380,6 @@ POST /membros-pesquisas
   "data_entrada": "string (opcional)"
 }
 ```
-
-#### Listar Associações
-```http
-GET /membros-pesquisas
-```
-**Descrição:** Listar todas as associações membro-pesquisa
-
-#### Buscar Associação
-```http
-GET /membros-pesquisas/:id_membro/:id_pesquisa
-```
-**Descrição:** Buscar associação específica
 
 #### Atualizar Associação
 ```http
@@ -458,4 +434,4 @@ GET /trabalhos/:id/membros
 - Campos marcados como "opcional" podem ser omitidos nas requisições
 - Datas devem seguir formato ISO 8601 (YYYY-MM-DD)
 - URLs de fotos devem ser válidas e acessíveis
-- Senhas devem seguir políticas de segurança adequadas
+- Senhas devem seguir políticas de segurança adequadas [hash]
